@@ -1,6 +1,0 @@
-2026/08/27-09:41:46.195 a4f4 Creating DB /home/liborio/.config/BraveSoftware/Brave-Origin/Default/IndexedDB/https_www.familysearch.org_0.indexeddb.leveldb since it was missing.
-2026/08/27-09:41:46.270 a4f4 Reusing MANIFEST /home/liborio/.config/BraveSoftware/Brave-Origin/Default/IndexedDB/https_www.familysearch.org_0.indexeddb.leveldb/MANIFEST-000001
-2026/08/27-10:02:47.583 a4f4 Level-0 table #5: started
-2026/08/27-10:02:47.633 a4f4 Level-0 table #5: 17260 bytes OK
-2026/08/27-10:02:47.708 a4f4 Delete type=0 #3
-2026/08/27-10:02:47.708 a4f4 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
