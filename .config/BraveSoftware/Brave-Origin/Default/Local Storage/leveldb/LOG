@@ -1,0 +1,36 @@
+2026/08/19-13:28:46.976 5 Reusing MANIFEST /home/liborio/.config/BraveSoftware/Brave-Origin/Default/Local Storage/leveldb/MANIFEST-000001
+2026/08/19-13:28:46.981 5 Recovering log #3
+2026/08/19-13:28:46.981 5 Reusing old log /home/liborio/.config/BraveSoftware/Brave-Origin/Default/Local Storage/leveldb/000003.log 
+2026/08/24-10:58:18.198 7 Level-0 table #5: started
+2026/08/24-10:58:18.233 7 Level-0 table #5: 21583 bytes OK
+2026/08/24-10:58:18.284 7 Delete type=0 #3
+2026/08/24-12:13:33.613 7 Level-0 table #7: started
+2026/08/24-12:13:33.670 7 Level-0 table #7: 14717 bytes OK
+2026/08/24-12:13:33.730 7 Delete type=0 #4
+2026/08/24-13:17:13.953 7 Level-0 table #9: started
+2026/08/24-13:17:13.992 7 Level-0 table #9: 65036 bytes OK
+2026/08/24-13:17:14.060 7 Delete type=0 #6
+2026/08/24-15:14:31.021 7 Level-0 table #11: started
+2026/08/24-15:14:31.055 7 Level-0 table #11: 15149 bytes OK
+2026/08/24-15:14:31.105 7 Delete type=0 #8
+2026/08/25-09:50:03.126 7 Level-0 table #13: started
+2026/08/25-09:50:03.177 7 Level-0 table #13: 14719 bytes OK
+2026/08/25-09:50:03.227 7 Delete type=0 #10
+2026/08/25-12:44:00.130 7 Level-0 table #15: started
+2026/08/25-12:44:00.190 7 Level-0 table #15: 14443 bytes OK
+2026/08/25-12:44:00.242 7 Delete type=0 #12
+2026/08/25-12:44:00.243 7 Compacting 4@0 + 1@1 files
+2026/08/25-12:44:00.282 7 Generated table #16@0: 220 keys, 67136 bytes
+2026/08/25-12:44:00.282 7 Compacted 4@0 + 1@1 files => 67136 bytes
+2026/08/25-12:44:00.331 7 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/08/25-12:44:00.333 7 Delete type=2 #7
+2026/08/25-12:44:00.333 7 Delete type=2 #9
+2026/08/25-12:44:00.333 7 Delete type=2 #11
+2026/08/25-12:44:00.334 7 Delete type=2 #13
+2026/08/25-12:44:00.334 7 Delete type=2 #15
+2026/08/25-14:17:46.064 7 Level-0 table #18: started
+2026/08/25-14:17:46.132 7 Level-0 table #18: 12243 bytes OK
+2026/08/25-14:17:46.200 7 Delete type=0 #14
+2026/08/25-15:23:32.913 5 Level-0 table #20: started
+2026/08/25-15:23:32.955 5 Level-0 table #20: 13986 bytes OK
+2026/08/25-15:23:32.989 5 Delete type=0 #17
