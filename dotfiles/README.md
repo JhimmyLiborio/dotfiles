@@ -14,6 +14,7 @@ cd dotfiles
 
 | App | Config Path | Description |
 |-----|-------------|-------------|
+| Zsh | `~/.zshrc` | oh-my-zsh, spaceship theme, vi mode, plugins (git, syntax-highlighting, autosuggestions, fzf) |
 | Bash | `~/.bashrc`, `~/.bash_profile` | Prompt colorido, aliases multi-distro, funcoes utilitarias |
 | Neovim | `~/.config/nvim/init.lua` | Config basica com clipboard Wayland |
 | Tmux | `~/.config/tmux/tmux.conf` | Prefix `C-s`, vim bindings, status bar solarized, popup bindings |
@@ -23,11 +24,13 @@ cd dotfiles
 ## What the Script Does
 
 1. **Detecta distro** (Arch, Ubuntu, Fedora) e instala pacotes via gerenciador correto
-2. **Instala ferramentas**: neovim, tmux, fzf, bat, ripgrep, fd, zoxide
-3. **Instala kanata** (binario em `~/.bin/kanata` ou via pacman)
-4. **Cria bare repo** em `~/.dotfiles` para gerenciar configs com git
-5. **Faz checkout** dos configs no `$HOME` (com backup automatico)
-6. **Configura kanata** como systemd user service (com udev rules e grupos)
+2. **Detecta shell** (bash/zsh) e configura ferramentas pro shell correto
+3. **Instala ferramentas**: neovim, tmux, fzf, bat, ripgrep, fd, zoxide
+4. **Instala oh-my-zsh** (se zsh detectado)
+5. **Instala kanata** (binario em `~/.bin/kanata` ou via pacman)
+6. **Cria bare repo** em `~/.dotfiles` para gerenciar configs com git
+7. **Faz checkout** dos configs no `$HOME` (com backup automatico)
+8. **Configura kanata** como systemd user service (com udev rules e grupos)
 
 ## Bare Repo Workflow
 
@@ -47,7 +50,7 @@ dotfiles commit -m "atualizei nvim"
 dotfiles push
 ```
 
-O alias `dotfiles` e adicionado ao `.bashrc` pelo script.
+O alias `dotfiles` e adicionado ao `.bashrc` ou `.zshrc` pelo script.
 
 ## Dependencies
 
@@ -65,7 +68,8 @@ sudo apt install git curl neovim tmux fzf bat ripgrep fd-find
 ```
 
 **Opcional:**
-- [zoxide](https://github.com/ajeetdsouza/zoxide) - `cd` inteligente
+- [zoxide](https://github.com/ajeetdsouza/zoxide) - `cd` inteligente (ja incluso no setup.sh)
+- [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) - framework zsh (ja incluso no setup.sh)
 - [tmux-sessionizer](https://github.com/joshmedeski/tmux-sessionizer) - `cargo install tmux-sessionizer`
 
 ## Kanata Setup (Home Row Mods)

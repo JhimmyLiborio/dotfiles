@@ -21,6 +21,11 @@ ok()    { echo -e "${GREEN}[OK]${NC} $1"; }
 warn()  { echo -e "${YELLOW}[WARN]${NC} $1"; }
 error() { echo -e "${RED}[ERROR]${NC} $1"; exit 1; }
 
+detect_shell() {
+    SHELL_NAME=$(basename "$SHELL")
+    info "Shell detectado: $SHELL_NAME"
+}
+
 detect_distro() {
     if [ -f /etc/os-release ]; then
         . /etc/os-release
@@ -93,6 +98,19 @@ install_zoxide() {
     ok "zoxide installed"
 }
 
+install_oh_my_zsh() {
+    if [ "$SHELL_NAME" != "zsh" ]; then
+        return
+    fi
+    if [ -d "$HOME/.oh-my-zsh" ]; then
+        ok "oh-my-zsh already installed"
+        return
+    fi
+    info "Installing oh-my-zsh..."
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+    ok "oh-my-zsh installed"
+}
+
 install_tmux_sessionizer() {
     if command -v tmux-sessionizer &>/dev/null; then
         ok "tmux-sessionizer already installed"
@@ -138,8 +156,14 @@ setup_bare_repo() {
     info "Cloning dotfiles as bare repo..."
     git clone --bare "$DOTFILES_REPO" "$DOTFILES_DIR"
 
-    # Define the dotfiles alias globally
-    echo 'alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"' >> "$HOME/.bashrc"
+    # Define the dotfiles alias in shell rc
+    local RC_FILE="$HOME/.bashrc"
+    if [ "$SHELL_NAME" = "zsh" ]; then
+        RC_FILE="$HOME/.zshrc"
+    fi
+    if ! grep -q 'alias dotfiles=' "$RC_FILE" 2>/dev/null; then
+        echo 'alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"' >> "$RC_FILE"
+    fi
 
     ok "Bare repo cloned"
 }
@@ -153,6 +177,7 @@ checkout_configs() {
         ".bashrc"
         ".bash_profile"
         ".bash_logout"
+        ".zshrc"
         ".config/kanata/config.kbd"
         ".config/nvim/init.lua"
         ".config/tmux/tmux.conf"
@@ -246,6 +271,7 @@ print_summary() {
     echo ""
     echo "Installed configs:"
     echo "  - .bashrc, .bash_profile, .bash_logout"
+    echo "  - .zshrc (oh-my-zsh + spaceship)"
     echo "  - nvim   -> ~/.config/nvim/init.lua"
     echo "  - tmux   -> ~/.config/tmux/tmux.conf"
     echo "  - kanata -> ~/.config/kanata/config.kbd"
@@ -269,9 +295,11 @@ main() {
     echo "============================================"
     echo ""
 
+    detect_shell
     detect_distro
     install_packages
     install_zoxide
+    install_oh_my_zsh
     install_tmux_sessionizer
     install_kanata
     setup_bare_repo
