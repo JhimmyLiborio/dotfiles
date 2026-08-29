@@ -194,30 +194,43 @@ alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 alias pscpu='ps auxf | sort -nr -k 3'
 alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 
-# Arch Linux specific
-alias update='sudo pacman -Syu'
-alias upgrade='sudo pacman -Syu'
-alias install='sudo pacman -S'
-alias remove='sudo pacman -Rs'
-alias search='pacman -Ss'
-alias info='pacman -Si'
-alias orphans='pacman -Qtdq'
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
-
-# AUR helper aliases (if yay or paru is installed)
-if command -v yay &> /dev/null; then
-    alias aur-update='yay -Syu'
-    alias aur-install='yay -S'
-    alias aur-search='yay -Ss'
-    alias aur-remove='yay -Rs'
+# Package manager aliases (multi-distro)
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
 fi
 
-if command -v paru &> /dev/null; then
-    alias aur-update='paru -Syu'
-    alias aur-install='paru -S'
-    alias aur-search='paru -Ss'
-    alias aur-remove='paru -Rs'
-fi
+case "${ID:-}" in
+    arch|manjaro|endeavouros)
+        alias update='sudo pacman -Syu'
+        alias upgrade='sudo pacman -Syu'
+        alias install='sudo pacman -S'
+        alias remove='sudo pacman -Rs'
+        alias search='pacman -Ss'
+        alias info='pacman -Si'
+        alias orphans='pacman -Qtdq'
+        alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
+
+        if command -v yay &> /dev/null; then
+            alias aur-update='yay -Syu'
+            alias aur-install='yay -S'
+            alias aur-search='yay -Ss'
+            alias aur-remove='yay -Rs'
+        fi
+        if command -v paru &> /dev/null; then
+            alias aur-update='paru -Syu'
+            alias aur-install='paru -S'
+            alias aur-search='paru -Ss'
+            alias aur-remove='paru -Rs'
+        fi
+        ;;
+    ubuntu|debian|linuxmint|pop)
+        alias update='sudo apt update && sudo apt upgrade -y'
+        alias install='sudo apt install -y'
+        alias remove='sudo apt remove'
+        alias search='apt search'
+        alias cleanup='sudo apt autoremove -y'
+        ;;
+esac
 
 # System control
 alias reboot='systemctl reboot'
