@@ -20,6 +20,9 @@
 
   ;; X11 repeat rate: delay=300ms, rate=50 repeats/sec
   linux-x11-repeat-delay-rate 300,50
+
+  ;; Keyboard device
+  linux-dev /dev/input/event3
 )
 
 ;; Home Row Mods - Sunaku-style (GACS order)

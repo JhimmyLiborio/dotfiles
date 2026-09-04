@@ -5,7 +5,7 @@ bindkey -v
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export JAVA_HOME=/usr/lib/jvm/jdk-21.0.4-oracle-x64
-export PATH=$PATH:$JAVA_HOME/bin
+export PATH="$HOME/.bin:$HOME/.local/bin:$PATH:$JAVA_HOME/bin"
 #export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/bin/java"
 #export PATH="$JAVA_HOME/bin:$PATH"
 #plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
@@ -177,6 +177,9 @@ mkcd(){
 }
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
+# zoxide (smart cd)
+eval "$(zoxide init zsh)"
 
 # opencode
 export PATH=/home/jhimmyliborio/.opencode/bin:$PATH
