@@ -129,6 +129,14 @@ vim.opt.modeline = false
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Usa a indentação do código para definir o que pode ser minimizado
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
+-- Garante que o arquivo comece com tudo aberto (não minimizado) ao entrar
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+
 -- Clear search highlighting
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { noremap = true, silent = true })
 
