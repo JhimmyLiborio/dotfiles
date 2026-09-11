@@ -1,0 +1,124 @@
+{
+  "version": 3,
+  "skills": {
+    "vercel-composition-patterns": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/composition-patterns/SKILL.md",
+      "skillFolderHash": "bf90d0a4b83ea054653350f9c67f6de235d3a368",
+      "installedAt": "2026-09-11T14:41:04.449Z",
+      "updatedAt": "2026-09-11T14:41:04.449Z"
+    },
+    "deploy-to-vercel": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/deploy-to-vercel/SKILL.md",
+      "skillFolderHash": "1378aa506439f26c809dbcfc61515cbd70f93d69",
+      "installedAt": "2026-09-11T14:41:04.450Z",
+      "updatedAt": "2026-09-11T14:41:04.450Z"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "skillFolderHash": "343db72180d05814949fef7d46be96b5c6ee86b3",
+      "installedAt": "2026-09-11T14:41:04.451Z",
+      "updatedAt": "2026-09-11T14:41:04.451Z"
+    },
+    "vercel-react-native-skills": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/react-native-skills/SKILL.md",
+      "skillFolderHash": "8b4c6a51914e2111ab6f4f00cb81778652aa241d",
+      "installedAt": "2026-09-11T14:41:04.451Z",
+      "updatedAt": "2026-09-11T14:41:04.451Z"
+    },
+    "vercel-react-view-transitions": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/react-view-transitions/SKILL.md",
+      "skillFolderHash": "13063dbbfc1b085cbc11b9bd5d4324aa2f41bb3a",
+      "installedAt": "2026-09-11T14:41:04.452Z",
+      "updatedAt": "2026-09-11T14:41:04.452Z"
+    },
+    "vercel-cli-with-tokens": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/vercel-cli-with-tokens/SKILL.md",
+      "skillFolderHash": "279c8760375cb6a47a4a8a312b652b0745c6d776",
+      "installedAt": "2026-09-11T14:41:04.452Z",
+      "updatedAt": "2026-09-11T14:41:04.452Z"
+    },
+    "vercel-optimize": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/vercel-optimize/SKILL.md",
+      "skillFolderHash": "0901aa3667db7a6e5cc40b213327290bf6556373",
+      "installedAt": "2026-09-11T14:41:04.453Z",
+      "updatedAt": "2026-09-11T14:41:04.453Z"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "skillFolderHash": "3116f3e62dbd02b44a598b1aa690d2a8938e8f89",
+      "installedAt": "2026-09-11T14:41:04.453Z",
+      "updatedAt": "2026-09-11T14:41:04.453Z"
+    },
+    "writing-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/writing-guidelines/SKILL.md",
+      "skillFolderHash": "17d954cadfb8dec50bf0c707c9e7634be9ae9fe8",
+      "installedAt": "2026-09-11T14:41:04.454Z",
+      "updatedAt": "2026-09-11T14:41:04.454Z"
+    },
+    "code-review": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/code-review/SKILL.md",
+      "skillFolderHash": "d8e341cee7980127dddda05159bedf25dc853615",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-09-11T14:52:22.149Z",
+      "updatedAt": "2026-09-11T14:52:22.149Z"
+    },
+    "security-and-hardening": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
+      "skillPath": "skills/security-and-hardening/SKILL.md",
+      "skillFolderHash": "b980a75e61d3c74820887c32378e3bd3c4e4e346",
+      "installedAt": "2026-09-11T15:25:11.842Z",
+      "updatedAt": "2026-09-11T15:25:11.842Z"
+    },
+    "devops-engineer": {
+      "source": "jeffallan/claude-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/jeffallan/claude-skills.git",
+      "skillPath": "skills/devops-engineer/SKILL.md",
+      "skillFolderHash": "9376c07c52d24a90ee14fe9f24fa28c164f9ec91",
+      "installedAt": "2026-09-11T15:25:40.111Z",
+      "updatedAt": "2026-09-11T15:25:40.111Z"
+    },
+    "ci-cd-and-automation": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
+      "skillPath": "skills/ci-cd-and-automation/SKILL.md",
+      "skillFolderHash": "34db321777a17e268ac425f0f7f2501dda55c955",
+      "installedAt": "2026-09-11T15:26:06.844Z",
+      "updatedAt": "2026-09-11T15:26:06.844Z"
+    }
+  },
+  "dismissed": {}
+}
