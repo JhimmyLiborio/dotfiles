@@ -4,3 +4,4 @@
 # If .bashrc exists, source it
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+. "$HOME/.cargo/env"
