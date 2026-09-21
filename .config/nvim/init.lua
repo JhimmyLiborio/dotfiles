@@ -129,16 +129,18 @@ vim.opt.modeline = false
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+
+-- Clear search highlighting
+vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { noremap = true, silent = true })
+-- Apertar Espaço + Espaço fecha ou abre as chaves (dobras)
+vim.keymap.set("n", "<leader><leader>", "za", { noremap = true, silent = true })
+
 -- Usa a indentação do código para definir o que pode ser minimizado
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldmethod = "indent"
 
 -- Garante que o arquivo comece com tudo aberto (não minimizado) ao entrar
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
-
--- Clear search highlighting
-vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { noremap = true, silent = true })
 
 -- ============================================================================
 -- PLUGINS (if using plugin manager)
