@@ -21,8 +21,8 @@
   ;; X11 repeat rate: delay=300ms, rate=50 repeats/sec
   linux-x11-repeat-delay-rate 300,50
 
-  ;; Keyboard device
-  linux-dev /dev/input/event3
+  ;; Keyboard devices: auto-detect all keyboards (NuPhy, Chicony, HP wireless)
+  ;; + hotplug. Do not hardcode linux-dev; event numbers change across reboots.
 )
 
 ;; Home Row Mods - Sunaku-style (GACS order)
