@@ -1,3 +1,9 @@
 [user]
-	email = Jhimmy@xyz.com
-	name = Joel Jhimmy Ramos Libório
+	email = joeljhimmy@ufam.edu.br
+    name = Jhimmy Libório
+
+[includeIf "gitdir:~/GitHub/"]
+    path = ~/.gitconfig-github
+
+[includeIf "gitdir:~/UFAM/"]
+    path = ~/.gitconfig-ufam
